@@ -8,8 +8,8 @@ def fizzbuzz():
         elif i % 3 == 0:
             print("Fizz ", end="")
         elif i % 5 == 0 and i == 100:
-            print("Buzz ")
+            print("Buzz ", end="")
         elif i % 5 == 0:
             print("Buzz ", end="")
         else:
-            print(i, end=" ")
+            print(f"{i} ", end="")
