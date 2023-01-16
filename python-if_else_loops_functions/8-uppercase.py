@@ -8,9 +8,8 @@ def uppercase(str):
         ascii_value = ord(str[counter])
 
         if ascii_value >= 97 and ascii_value <= 122:
-            print(chr(ascii_value - 32), end="")
+            print("{}".format(chr(ascii_value - 32)), end="")
         else:
-            print(letter, end="")
+            print("{}".format(letter), end="")
         counter += 1
     print("\n")
-
