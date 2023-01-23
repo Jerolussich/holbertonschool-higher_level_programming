@@ -8,6 +8,8 @@ def print_matrix_integer(matrix=[[]]):
     size_row = len(matrix) - 1
     size_column = len(matrix[0]) - 1
 
+    if size_row == 0 or size_column == 0:
+        return
     while row_idx <= size_row:
         while column_idx <= size_column:
             if column_idx != size_column:
