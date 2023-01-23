@@ -9,7 +9,7 @@ def print_matrix_integer(matrix=[[]]):
     size_column = len(matrix[0]) - 1
 
     if size_row == -1 or size_column == -1:
-        print("\n")
+        print("")
         return
     while row_idx <= size_row:
         while column_idx <= size_column:
