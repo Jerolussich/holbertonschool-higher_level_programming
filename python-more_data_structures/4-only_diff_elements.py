@@ -14,6 +14,6 @@ def only_diff_elements(set_1, set_2):
     return (new_set)
 
 # This solution occured to me later but the original felt more intutive
-#only_in_set_1 = set_1 - set_2
-#only_in_set_2 = set_2 - set_1
+# only_in_set_1 = set_1 - set_2
+# only_in_set_2 = set_2 - set_1
 # only_in_set_1.union(only_in_set_2)
