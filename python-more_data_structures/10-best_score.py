@@ -6,8 +6,8 @@ def best_score(a_dictionary):
     biggest_number = 0
     biggest_key = ""
 
-    if a_dictionary is None:
-        return (None)
+    if a_dictionary is None or len(a_dictionary) < 0:
+        return None
     for key in a_dictionary:
         if a_dictionary[key] > biggest_number:
             biggest_number = a_dictionary[key]
