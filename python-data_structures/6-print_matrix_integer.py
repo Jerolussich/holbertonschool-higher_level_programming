@@ -11,9 +11,9 @@ def print_matrix_integer(matrix=[[]]):
     while row_idx <= size_row:
         while column_idx <= size_column:
             if column_idx != size_column:
-                print("{} ".format(matrix[row_idx][column_idx]), end="")
+                print("{:d} ".format(matrix[row_idx][column_idx]), end="")
             else:
-                print("{}".format(matrix[row_idx][column_idx]), end="\n")
+                print("{:d}".format(matrix[row_idx][column_idx]), end="\n")
             column_idx += 1
         column_idx = 0
         row_idx += 1
