@@ -4,7 +4,7 @@
 def safe_print_division(a, b):
     """safe print division"""
     c = 0
-    if b == 0 or a == 0:
+    if b == 0:
         return None
 
     try:
