@@ -5,6 +5,7 @@ def safe_print_division(a, b):
     """safe print division"""
     c = 0
     if b == 0:
+        print("Inside result: {}".format(None))
         return None
 
     try:
