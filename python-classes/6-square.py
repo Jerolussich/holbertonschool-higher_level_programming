@@ -8,10 +8,10 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """initialize class"""
         self.__size = size
+        if (len(position)) != 2:
+            raise IndexError("position must be a tuple of 2 positive integers")
         if type(position[0]) is not int or type(position[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if (len(position)) != 2:
-            raise IndexError("must be a tuple of 2 positive integers")
         if position[0] < 0 or position[1] < 0:
             raise ValueError("position must be a tuple of 2 positive integers")
         else:
