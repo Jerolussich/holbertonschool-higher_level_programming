@@ -2,6 +2,8 @@
 
 
 class Square:
+    """square class"""
+
     def __init__(self, _size):
         """initliaze class"""
         self.__dict__ = {}
