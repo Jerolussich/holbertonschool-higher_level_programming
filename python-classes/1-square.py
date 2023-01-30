@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-    """shebang"""
+"""shebang"""
+
 
 class Square:
     """square class"""
