@@ -46,16 +46,16 @@ class Square:
             print("")
             return
 
-        if self._position[1] > 0:
-            for i in range(self._position[1]):
+        if self.__position[1] > 0:
+            for i in range(self.__position[1]):
                 print("")
 
-        for row in range(self._size):
+        for row in range(self.__size):
 
-            if self._position[1] <= self._position[0]:
-                for i in range(self._position[0]):
+            if self.__position[1] <= self.__position[0]:
+                for i in range(self.__position[0]):
                     print("_", end="")
 
-            for i in range(self._size):
+            for i in range(self.__size):
                 print("#", end="")
             print("")
