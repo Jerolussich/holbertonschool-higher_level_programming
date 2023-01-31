@@ -57,7 +57,7 @@ class Rectangle:
         """returns string format object"""
 
         if self.__height == 0 or self.__width == 0:
-            return ("\n")
+            return ("")
 
         string = ""
 
