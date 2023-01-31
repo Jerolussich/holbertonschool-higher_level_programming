@@ -24,4 +24,4 @@ class tests(unittest.TestCase):
         self.assertEqual(max_integer(), None)
 
     def test_one_element(self):
-        self.assertEqual(max_integer(5), 5)
+        self.assertEqual(max_integer([5]), 5)
