@@ -22,3 +22,6 @@ class tests(unittest.TestCase):
 
     def test_empty(self):
         self.assertEqual(max_integer(), None)
+
+    def test_one_element(self):
+        self.assertEqual(max_integer(5), 5)
