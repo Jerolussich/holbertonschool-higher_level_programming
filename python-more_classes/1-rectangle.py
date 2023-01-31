@@ -8,15 +8,13 @@ class Rectangle:
     def __init__(self, __width=0, __height=0):
         """initializes"""
         self.__dict__ = {}
-        if type(__height) is not int:
-            raise TypeError("height must be an integer")
-        if __height < 0:
-            raise ValueError("height must be >= 0")
+        if type(__height) is not int or type(__width) is not int:
+            print(TypeError("height must be an integer"))
+            print(TypeError("width must be an integer"))
+        if __height < 0 or __width is not int:
+            print(ValueError("height must be >= 0"))
+            print(ValueError("width must be >= 0"))
         self.__height = __height
-        if type(__height) is not int:
-            raise TypeError("width must be an integer")
-        if __height < 0:
-            raise ValueError("width must be >= 0")
         self.__width = __width
 
     @property
