@@ -3,7 +3,7 @@
 
 
 def matrix_divided(matrix, div):
-    """divide safely"""
+    """divide safely a matrix"""
     row = len(matrix)
     row_size = len(matrix[0])
     new_matrix = [[0 for col in range(row_size)] for row in range(row)]
