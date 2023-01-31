@@ -56,6 +56,9 @@ class Rectangle:
     def __str__(self):
         """returns string format object"""
 
+        if self.__height == 0 or self.__width == 0:
+            return ("\n")
+
         string = ""
 
         if (self.__height == 0 or self.__width == 0):
