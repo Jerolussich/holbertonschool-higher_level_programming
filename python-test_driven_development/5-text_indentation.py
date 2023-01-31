@@ -21,4 +21,3 @@ def text_indentation(text):
         if char == "." or char == "," or char == "?" or char == ":":
             print("\n")
             stat = 1
-    return ""
