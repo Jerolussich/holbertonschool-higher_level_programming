@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""shebang"""
+
+
 class Rectangle:
     """Rectangle class"""
 
@@ -67,7 +70,8 @@ class Rectangle:
 
     def __repr__(self):
         """return object attributes"""
-        return f"Rectangle({self.__width}, {self.__height}, {self.number_of_instances})"
+        return f"Rectangle({self.__width},"
+        "{self.__height}, {self.number_of_instances})"
 
     def __del__(self):
         """delete object"""
