@@ -68,7 +68,8 @@ class Rectangle:
 
     def __repr__(self):
         """return object atribute representation"""
-        return (f"Rectangle({self.__width}, {self.__height}, {self.number_of_instances})")
+        return (f"Rectangle({self.__width},"
+                "{self.__height}, {self.number_of_instances})")
 
     def __del__(self):
         """"delete object"""
