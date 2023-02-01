@@ -17,7 +17,7 @@ class Rectangle:
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
-            raise TypeError(" rect_2 must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_2.area() > rect_1.area():
             return rect_2
         else:
@@ -25,16 +25,16 @@ class Rectangle:
 
     def __init__(self, __width=0, __height=0):
         """initializes"""
-        if type(__height) is not int:
-            raise TypeError("height must be an integer")
-        if __height < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = __height
         if type(__width) is not int:
             raise TypeError("width must be an integer")
         if __width < 0:
             raise ValueError("width must be >= 0")
         self.__width = __width
+        if type(__height) is not int:
+            raise TypeError("height must be an integer")
+        if __height < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = __height
         Rectangle.number_of_instances += 1
 
     @property
@@ -85,7 +85,8 @@ class Rectangle:
 
     def __repr__(self):
         """return string with object attributes"""
-        return f"Rectangle({self.__width}, {self.__height}, {self.number_of_instances})"
+        return f"Rectangle({self.__width}, {self.__height},"
+        "{self.number_of_instances})"
 
     def __del__(self):
         """deletes object"""
