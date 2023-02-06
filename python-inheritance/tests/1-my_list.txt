@@ -21,5 +21,9 @@
 [1, 2, 3, 4, 5]
 
 >>> my_list = MyList([1,- 1, 2, 3, 4])
->>> my_list.print_sorted()
+>>> a = my_list.print_sorted()
 [-1, 1, 2, 3, 4]
+
+>>> my_list.print_sorted() is None
+[-1, 1, 2, 3, 4]
+True
