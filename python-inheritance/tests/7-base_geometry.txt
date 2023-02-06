@@ -1,0 +1,16 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg.integer_validator("name", "John")
+[TypeError] name must be an integer
+
+>>> bg.integer_validator("age", 0)
+[ValueError] age must be greater than 0
+
+>>>  bg.integer_validator("distance", -4)
+[ValueError] distance must be greater than 0
+
+>>> bg.integer_validator()
+[TypeError] BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator(int("name"), "John")
+[ValueError] invalid literal for int() with base 10: 'name'
