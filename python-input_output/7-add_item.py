@@ -17,26 +17,21 @@ def main():
 
     try:
         with open(filename, 'r', encoding="utf-8") as f:
-            content = f.read()
-            formated_content = (content.replace(
-                "[", "").replace("]", "").replace(",", "")
-                .replace("\"", "").replace("\n", "")).split(" ")
 
-            if len(content) != 3:
+            if len(f.read()) != 3:
+
+                formated_content = load_from_json_file(filename)
                 new_list = formated_content + args[1:]
             else:
-                new_list = args[1:]
+                new_list += args[1:]
 
             save_to_json_file(new_list, filename)
-            load_from_json_file(filename)
 
     except FileNotFoundError:
         with open(filename, 'w', encoding="utf-8") as f:
 
-            new_list = args[1:]
-
+            new_list += args[1:]
             save_to_json_file(new_list, filename)
-            load_from_json_file(filename)
 
 
 if __name__ == "__main__":
