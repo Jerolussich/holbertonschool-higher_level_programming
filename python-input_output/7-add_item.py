@@ -12,21 +12,32 @@ def main():
     """main function"""
     args = sys.argv
     filename = "add_item.json"
-    with open(filename, 'a+', encoding="utf-8") as f:
-        content = f.read()
-        formated_content = content.replace(
-            "[", "").replace("]", "").replace(",", "").replace("\"", "")
 
-        formated_content = formated_content.split(" ")
-        new_list = []
+    try:
+        with open(filename, 'r', encoding="utf-8") as f:
+            content = f.read()
+            formated_content = content.replace(
+                "[", "").replace("]", "").replace(",", "").replace("\"", "")
 
-        if len(content) != 0:
-            new_list = formated_content + args[1:]
-        else:
+            formated_content = formated_content.split(" ")
+            new_list = []
+
+            print(content)
+            if len(content) != 0:
+                new_list = formated_content + args[1:]
+            else:
+                new_list = args[1:]
+
+            save_to_json_file(new_list, filename)
+            load_from_json_file(filename)
+    except FileNotFoundError:
+        with open(filename, 'w', encoding="utf-8") as f:
+
+            new_list = []
             new_list = args[1:]
 
-        save_to_json_file(new_list, filename)
-        load_from_json_file(filename)
+            save_to_json_file(new_list, filename)
+            load_from_json_file(filename)
 
 
 if __name__ == "__main__":
