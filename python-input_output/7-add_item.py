@@ -15,11 +15,16 @@ def main():
     with open(filename, 'r+', encoding="utf-8") as f:
         content = f.read()
         formated_content = content.replace(
-            "[", "").replace("]", "").replace(",", "").replace("\"", "").replace(" ", "")
+            "[", "").replace("]", "").replace(",", "").replace("\"", "")
 
         formated_content = formated_content.split(" ")
+        print(formated_content)
         new_list = []
-        new_list = formated_content + args[1:]
+
+        if len(content) != 0:
+            new_list = formated_content + args[1:]
+        else:
+            new_list = args[1:]
 
         save_to_json_file(new_list, filename)
         load_from_json_file(filename)
