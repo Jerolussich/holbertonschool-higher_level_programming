@@ -29,4 +29,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """print string representation"""
-        return f"[rectangle] {self.__width__}/{self.__height__}"
+        return f"[Rectangle] {self.__width__}/{self.__height__}"
