@@ -12,13 +12,12 @@ def main():
     """main function"""
     args = sys.argv
     filename = "add_item.json"
-    with open(filename, 'r+', encoding="utf-8") as f:
+    with open(filename, 'a+', encoding="utf-8") as f:
         content = f.read()
         formated_content = content.replace(
             "[", "").replace("]", "").replace(",", "").replace("\"", "")
 
         formated_content = formated_content.split(" ")
-        print(formated_content)
         new_list = []
 
         if len(content) != 0:
