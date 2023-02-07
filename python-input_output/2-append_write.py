@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""shebang"""
+
 
 def append_write(filename="", text=""):
     """function that appends"""
