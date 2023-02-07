@@ -13,27 +13,26 @@ def main():
     args = sys.argv
     filename = "add_item.json"
 
+    new_list = []
+
     try:
         with open(filename, 'r', encoding="utf-8") as f:
             content = f.read()
-            formated_content = content.replace(
-                "[", "").replace("]", "").replace(",", "").replace("\"", "")
+            formated_content = (content.replace(
+                "[", "").replace("]", "").replace(",", "")
+                .replace("\"", "").replace("\n", "")).split(" ")
 
-            formated_content = formated_content.split(" ")
-            new_list = []
-
-            print(content)
-            if len(content) != 0:
+            if len(content) != 3:
                 new_list = formated_content + args[1:]
             else:
                 new_list = args[1:]
 
             save_to_json_file(new_list, filename)
             load_from_json_file(filename)
+
     except FileNotFoundError:
         with open(filename, 'w', encoding="utf-8") as f:
 
-            new_list = []
             new_list = args[1:]
 
             save_to_json_file(new_list, filename)
