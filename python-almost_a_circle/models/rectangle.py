@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """rectangle.py"""
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -68,8 +68,8 @@ class Rectangle(Base):
         """validates inputs given"""
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
-        if name == "width" and value < 0 or name == "height" and value < 0:
-            raise ValueError(f"{name} must be > 0 ")
+        if name == "width" and value <= 0 or name == "height" and value <= 0:
+            raise ValueError(f"{name} must be > 0")
         if name == "x" and value < 0 or name == "y" and value < 0:
             raise ValueError(f"{name} must be >= 0")
 
