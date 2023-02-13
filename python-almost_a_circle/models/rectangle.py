@@ -91,7 +91,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """print string attributes"""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.y} - \
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.y} -\
 {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
@@ -104,10 +104,10 @@ class Rectangle(Base):
                 self.id = args[0]
 
             if size > 1:
-                self.height = args[1]
+                self.width = args[1]
 
             if size > 2:
-                self.width = args[2]
+                self.height = args[2]
 
             if size > 3:
                 self.x = args[3]
