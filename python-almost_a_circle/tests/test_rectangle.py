@@ -2,7 +2,7 @@ import contextlib
 import io
 import unittest
 
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
