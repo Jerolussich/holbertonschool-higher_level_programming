@@ -10,7 +10,7 @@ class Testsquare(unittest.TestCase):
         self.s = Square(5)
 
     def test_init(self):
-        """init test """
+        """init test"""
         self.assertEqual(self.s.size, 5)
         self.assertEqual(self.s.x, 0)
         self.assertEqual(self.s.y, 0)
