@@ -18,7 +18,7 @@ class Testsquare(unittest.TestCase):
     def test_str(self):
         """str print test"""
         self.assertEqual(
-            str(self.s), "[Square] (2) 0/0 - 5")
+            str(self.s), "[Square] (9) 0/0 - 5")
 
     def test_update(self):
         """update function all inputs"""

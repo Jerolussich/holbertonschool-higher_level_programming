@@ -28,7 +28,7 @@ class Testbase(unittest.TestCase):
         """test output no string given"""
         data = None
         result = Base.to_json_string(data)
-        expected = []
+        expected = "[]"
         self.assertEqual(result, expected)
 
     def test_from_jsonstring(self):

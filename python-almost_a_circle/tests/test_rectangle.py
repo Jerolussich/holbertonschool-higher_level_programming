@@ -32,19 +32,19 @@ class TestRectangle(unittest.TestCase):
     def test_str_(self):
         """print string"""
         self.r = Rectangle(2, 3)
-        self.assertEqual(str(self.r), "[Rectangle] (4) 0/0 - 2/3")
+        self.assertEqual(str(self.r), "[Rectangle] (5) 0/0 -2/3")
 
     def test_update(self):
         """update function all inputs"""
         self.r = Rectangle(1, 2, 3, 4)
         self.r.update(1, 2, 3, 4)
         self.assertEqual(self.r.id, 1)
-        self.assertEqual(self.r.width, 3)
-        self.assertEqual(self.r.height, 2)
+        self.assertEqual(self.r.width, 2)
+        self.assertEqual(self.r.height, 3)
         self.assertEqual(self.r.x, 4)
         self.assertEqual(self.r.y, 4)
 
     def test_todictionary(self):
         self.r = Rectangle(1, 2, 3, 4)
         self.assertEqual(self.r.to_dictionary(), {
-                         'x': 3, 'y': 4, 'id': 5, 'height': 2, 'width': 1})
+                         'x': 3, 'y': 4, 'id': 6, 'height': 2, 'width': 1})
