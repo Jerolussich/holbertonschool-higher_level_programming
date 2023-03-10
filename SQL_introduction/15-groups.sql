@@ -1,3 +1,4 @@
+-- Shows score and frequency in table
 SELECT
     score,
     COUNT(score) AS "number"

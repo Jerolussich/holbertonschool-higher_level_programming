@@ -1,3 +1,4 @@
+-- Shows scores when name is not null
 SELECT
     score,
     name

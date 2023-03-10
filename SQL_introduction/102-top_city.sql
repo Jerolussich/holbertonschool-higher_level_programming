@@ -1,3 +1,4 @@
+-- Shows top 3 citiess with highest temperature
 SELECT
     city,
     AVG(VALUE) AS avg_temp

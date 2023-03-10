@@ -1,3 +1,4 @@
+-- orders scores by descending order
 SELECT
     score,
     name

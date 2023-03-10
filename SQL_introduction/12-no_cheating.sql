@@ -1,3 +1,4 @@
+-- Updates row with score
 UPDATE
     second_table
 SET

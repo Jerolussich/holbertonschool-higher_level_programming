@@ -1,3 +1,4 @@
+-- Shows score from table higher than 9
 SELECT
     score,
     name
