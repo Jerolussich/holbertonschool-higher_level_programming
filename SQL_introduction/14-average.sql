@@ -1,5 +1,5 @@
 -- Shows average score from table
 SELECT
-    AVG(SCORE) AS AVG
+    AVG(SCORE) AS average
 FROM
     second_table;
