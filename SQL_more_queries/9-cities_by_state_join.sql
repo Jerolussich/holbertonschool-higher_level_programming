@@ -5,4 +5,4 @@ SELECT
     states.name
 FROM
     cities
-    JOIN states ON states.id = cities.state_id
+    JOIN states ON cities.state_id = states.id;
