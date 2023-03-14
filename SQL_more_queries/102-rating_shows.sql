@@ -1,4 +1,4 @@
---Script that lists all shows from hbtn_0d_tvshows_rate by their rating.
+-- Script that lists all shows from hbtn_0d_tvshows_rate by their rating.
 SELECT
     tv_shows.title,
     SUM(ratings.rating) as rating_sum
