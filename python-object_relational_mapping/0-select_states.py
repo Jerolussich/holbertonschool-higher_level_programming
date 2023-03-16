@@ -13,7 +13,7 @@ if __name__ == '__main__':
     cursor.execute("""SELECT id, name FROM states
             ORDER BY states.id ASC""")
 
-    result = cursor.fetchmany(5)
+    result = cursor.fetchall()
 
     for item in result:
         print(item)
