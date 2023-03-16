@@ -18,12 +18,16 @@ if __name__ == "__main__":
     result = cursor.fetchall()
 
     size = len(result)
-    for idx, item in enumerate(result):
 
-        if idx != size - 1:
-            print(f"{item[0]}, ", end="")
-        else:
-            print(f"{item[0]}")
+    if size != 0:
+        for idx, item in enumerate(result):
+
+            if idx != size - 1:
+                print(f"{item[0]}, ", end="")
+            else:
+                print(f"{item[0]}")
+    else:
+        print("")
 
     cursor.close()
     db.close()
