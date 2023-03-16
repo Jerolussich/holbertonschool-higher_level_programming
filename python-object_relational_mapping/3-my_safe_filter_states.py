@@ -3,19 +3,21 @@
 import MySQLdb
 import sys
 
-db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                     password="", database=sys.argv[3])
+if __name__ == '__main__':
 
-cursor = db.cursor()
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         password="", database=sys.argv[3])
 
-cursor.execute(
-    "SELECT id, name FROM states WHERE name LIKE %s \
-    ORDER BY states.id ASC".format(sys.argv[4]))
+    cursor = db.cursor()
 
-result = cursor.fetchall()
+    cursor.execute(
+        "SELECT id, name FROM states WHERE name LIKE %s \
+        ORDER BY states.id ASC".format(sys.argv[4]))
 
-for item in result:
-    print(item)
+    result = cursor.fetchall()
 
-cursor.close()
-db.close()
+    for item in result:
+        print(item)
+
+    cursor.close()
+    db.close()
