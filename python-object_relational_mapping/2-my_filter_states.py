@@ -9,13 +9,14 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    cursor.execute(
-        "SELECT id, name FROM states WHERE name LIKE '%{}' ORDER BY states.id ASC".format(sys.argv[4]))
+    cursor.execute("SELECT id, name FROM states WHERE name\
+        LIKE '%{}' ORDER BY states.id ASC".format(sys.argv[4]))
 
     result = cursor.fetchall()
 
     for item in result:
-        print(item)
+        if item[1][0] == 'N':
+            print(item)
 
     cursor.close()
     db.close()
