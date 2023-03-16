@@ -1,23 +1,28 @@
 #!/usr/bin/python3
-"""script that deletes all State objects with a name containing\
-    the letter a from the database hbtn_0e_6_usa"""
+"""MODULE NAME"""
 
-from model_state import Base, State
-from sqlalchemy import select
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import sys
+from sqlalchemy.ext.declarative import declarative_base
+from sys import argv
+from model_state import Base, State
+
+
+Base = declarative_base()
 
 
 if __name__ == '__main__':
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                           format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
-    Session = sessionmaker(engine)
+
+    engine = create_engine(
+        f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
+    Base.metadata.create_all(bind=engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name.contains("a"))
-    session.delete(state)
-    session.commit()
+    result = session.query(State).filter(State.name.like('%a%'))
+    for item in result:
+        session.delete(item)
 
+    session.commit()
     session.close()
