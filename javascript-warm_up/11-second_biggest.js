@@ -1,15 +1,12 @@
 #!/usr/bin/node
 
-let args = process.argv;
+const args = process.argv;
 
-if (args.length < 4)
-    console.log("0");
-else
-{
-    let biggest_number = -Infinity;
+if (args.length < 4) { console.log('0'); } else {
+  let biggest_number = -Infinity;
 
-    for (let i = 2; i < args.length; i++)
-        if (Number(args[i]) > biggest_number)
-            biggest_number = Number(args[i]);     
-    console.log(biggest_number);
+  for (let i = 2; i < args.length; i++) {
+    if (Number(args[i]) > biggest_number) { biggest_number = Number(args[i]); }
+  }
+  console.log(biggest_number);
 }
