@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const args = process.argv.slice(2);
-const to_print = args[0];
+const toPrint = args[0];
 
-if (to_print) {
-  console.log(to_print);
+if (toPrint) {
+  console.log(toPrint);
 } else {
   console.log('No argument');
 }
