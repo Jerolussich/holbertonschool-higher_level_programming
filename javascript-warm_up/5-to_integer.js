@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
 const args = process.argv;
-const argument_given = Number(process.argv[2]);
+const argumentGiven = Number(process.argv[2]);
 
-if (!(argument_given != argument_given)) { 
-    console.log(`My number: ${argument_given}`); 
+if (!(argumentGiven != argumentGiven)) { 
+    console.log(`My number: ${argumentGiven}`); 
 }
 else {
     console.log('Not a number');
