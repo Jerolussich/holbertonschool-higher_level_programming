@@ -1,9 +1,8 @@
 #!/usr/bin/node
 
-let previous_output = 0;
+let previousOutput = 0;
 
-exports.logMe =
-function (item) {
-  console.log(`${previous_output}: ${item}`);
-  previous_output += 1;
+exports.logMe = function (item) {
+  console.log(`${previousOutput}: ${item}`);
+  previousOutput += 1;
 };
