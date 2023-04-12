@@ -3,11 +3,11 @@
 exports.esrever = function (list) {
   let size = list.length - 1;
   let index = 0;
-  const new_list = [];
+  const newList = [];
 
-  for (let i = size; list[size]; size--, index++) {
-    new_list[index] = list[size];
+  for (; list[size]; size--, index++) {
+    newList[index] = list[size];
   }
 
-  return new_list;
+  return newList;
 };
