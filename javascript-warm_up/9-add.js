@@ -1,3 +1,13 @@
 #!/usr/bin/node
+const process = require('process');
+const args = process.argv;
 
-console.log(parseInt(process.argv[2], 10) + parseInt(process.argv[3], 10));
+if (isNaN(args[2]) || isNaN(args[3])) {
+  console.log('NaN');
+} else {
+  add(parseInt(args[2]), parseInt(args[3]));
+}
+
+function add (a, b) {
+  console.log(a + b);
+}
