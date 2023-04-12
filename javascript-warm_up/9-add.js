@@ -2,8 +2,12 @@
 
 const args = process.argv;
 
-console.log(add(Number(args[2]), Number(args[3])));
+console.log(factorial(Number(args[2])));
 
-function add (a, b) {
-  return (a + b);
+function factorial (n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
 }
