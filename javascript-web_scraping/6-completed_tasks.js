@@ -21,7 +21,6 @@ request(options, function (err, resp, body) {
   data.forEach(task => {
     if (!userData[task.userId] && task.completed === true) {
       userData[task.userId] = 0;
-      userData[task.userId]++;
     }
     if (task.completed === true) {
       userData[task.userId]++;
