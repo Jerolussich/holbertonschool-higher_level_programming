@@ -10,13 +10,12 @@ const options = {
 let count = 0;
 
 request(options, function (err, resp, body) {
-
   if (err) {
     console.log(err);
     return;
   }
 
-  let data = JSON.parse(body).results;
+  const data = JSON.parse(body).results;
 
   data.forEach((film) => {
     film.characters.forEach((character) => {
