@@ -10,12 +10,12 @@ const options = {
 
 const userData = {};
 
-request(options, function(err, resp, body) {
+request(options, function (err, resp, body) {
   if (err) {
     console.log(err);
     return;
   }
-  
+
   const data = JSON.parse(body);
 
   data.forEach(task => {
