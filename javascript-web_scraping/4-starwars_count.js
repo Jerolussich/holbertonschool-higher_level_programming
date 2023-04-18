@@ -3,7 +3,7 @@
 const request = require('request');
 
 const options = {
-  url: 'https://swapi-api.hbtn.io/api/films/',
+  url: process.argv[2],
   method: 'GET'
 };
 
